@@ -1,0 +1,24 @@
+diff -ur camlimages-2.00/tiff/tiffread.c camlimages-2.00-/tiff/tiffread.c
+--- camlimages-2.00/tiff/tiffread.c	Fri Jun 15 14:43:13 2001
++++ camlimages-2.00-/tiff/tiffread.c	Tue May 14 23:53:44 2002
+@@ -37,7 +37,7 @@
+ typedef	char int8;
+ #endif
+ 
+-#ifdef uint8
++#ifndef uint8
+ typedef	unsigned char uint8;
+ #endif
+ #ifdef int16
+diff -ur camlimages-2.00/tiff/tiffwrite.c camlimages-2.00-/tiff/tiffwrite.c
+--- camlimages-2.00/tiff/tiffwrite.c	Fri Jun 15 14:43:13 2001
++++ camlimages-2.00-/tiff/tiffwrite.c	Tue May 14 23:54:02 2002
+@@ -34,7 +34,7 @@
+ #else
+ typedef	char int8;
+ #endif
+-#ifdef uint8
++#ifndef uint8
+ typedef	unsigned char uint8;
+ #endif
+ #ifdef int16
