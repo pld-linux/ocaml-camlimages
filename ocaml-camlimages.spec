@@ -1,12 +1,12 @@
 Summary:	Image processing library for OCaml
 Summary(pl):	Biblioteka przetwarzania obrazów dla OCamla
 Name:		ocaml-camlimages
-Version:	2.11
+Version:	2.12
 Release:	2
 License:	LGPL with additional linking exception
 Group:		Libraries
 Source0:	ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/camlimages-%{version}.tgz
-# Source0-md5:	f04f0d1a78aa38a6841dc3d71e249449
+# Source0-md5:	6662c0a3e7653a731410cd9783a55bfb
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-kill-gtk.patch
 URL:		http://pauillac.inria.fr/camlimages/
@@ -119,5 +119,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ocaml/camlimages/*.cm[ixa]*
 %{_libdir}/ocaml/camlimages/*.a
 %{_libdir}/ocaml/camlimages/Makefile.config
+%{_libdir}/ocaml/camlimages/*.h
 %{_libdir}/ocaml/site-lib/ci_core
 %{_examplesdir}/%{name}-%{version}
