@@ -9,6 +9,7 @@ URL:		http://pauillac.inria.fr/camlimages/
 Source0:	ftp://ftp.inria.fr/lang/caml-light/bazar-ocaml/camlimages-%{version}.tgz
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-buildfix.patch
+Patch2:		%{name}-libpng12.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	freetype-devel >= 2.0.0
@@ -66,6 +67,7 @@ tej biblioteki.
 %setup -q -n camlimages-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 autoconf
