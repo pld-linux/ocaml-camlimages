@@ -3,26 +3,26 @@ Summary(pl):	Biblioteka przetwarzania obrazów dla OCamla
 Name:		ocaml-camlimages
 Version:	2.11
 Release:	1
-License:	LGPL
+License:	LGPL with additional linking exception
 Group:		Libraries
-URL:		http://pauillac.inria.fr/camlimages/
 Source0:	ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/camlimages-%{version}.tgz
 # Source0-md5:	f04f0d1a78aa38a6841dc3d71e249449
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-kill-gtk.patch
+URL:		http://pauillac.inria.fr/camlimages/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	freetype-devel >= 2.0.0
+BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	ghostscript
+BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libjpeg-devel
 BuildRequires:	libungif-devel
-BuildRequires:	ocaml-x11graphics-devel
+BuildRequires:	ocaml >= 3.04-7
 # our lablgtk is too recent
 #BuildRequires:	ocaml-lablgtk-devel
-BuildRequires:	ocaml >= 3.04-7
-BuildRequires:	gdk-pixbuf-devel
+BuildRequires:	ocaml-x11graphics-devel
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -77,9 +77,10 @@ tej biblioteki.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_libdir}/ocaml/camlimages
-%{__make} install LIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml/camlimages
+
+%{__make} install \
+	LIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml/camlimages
 
 (cd $RPM_BUILD_ROOT%{_libdir}/ocaml && ln -s camlimages/dll*.so .)
 
@@ -107,15 +108,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc LICENSE CHANGES README
 %dir %{_libdir}/ocaml/camlimages
 %attr(755,root,root) %{_libdir}/ocaml/camlimages/*.so
-%{_libdir}/ocaml/*.so
+%attr(755,root,root) %{_libdir}/ocaml/*.so
 
 %files devel
 %defattr(644,root,root,755)
-%doc LICENSE CHANGES README doc/*
+%doc doc/*
 %{_libdir}/ocaml/camlimages/*.cm[ixa]*
 %{_libdir}/ocaml/camlimages/*.a
 %{_libdir}/ocaml/camlimages/Makefile.config
-%{_examplesdir}/%{name}-%{version}
 %{_libdir}/ocaml/site-lib/ci_core
+%{_examplesdir}/%{name}-%{version}
