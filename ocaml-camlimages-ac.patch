@@ -1,0 +1,44 @@
+diff -ur camlimages-2.00/configure.in camlimages-2.00-/configure.in
+--- camlimages-2.00/configure.in	Thu Feb 14 14:25:17 2002
++++ camlimages-2.00-/configure.in	Tue May 14 23:44:39 2002
+@@ -94,7 +94,7 @@
+     LABLGTKDIR_MESSAGE="found at $LABLGTKDIR"
+     AC_MSG_RESULT($LABLGTKDIR_MESSAGE)
+     AC_MSG_CHECKING(the version of lablgtk)
+-    if test -f $LABLGTKDIR/gBin.mli; then
++    if test -f $LABLGTKDIR/gBin.cmi; then
+       SUPPORT_LABLGTK="true"
+       SUPPORTED="$SUPPORTED lablgtk"
+       AC_MSG_RESULT(ok)
+@@ -241,26 +241,26 @@
+ if test "$NOEXTERNAL" = "false" -a "X$SUPPORT_FREETYPE" = "X" ; then
+     SUPPORT_FREETYPE="false"
+     AC_CHECK_LIB(ttf, TT_Init_FreeType,
+-  	    AC_CHECK_HEADER(freetype.h,
++  	    [AC_CHECK_HEADER(freetype.h,
+   		    AC_DEFINE(HAVE_FREETYPE) LIBFREETYPE="-lttf"; 
+   		    SUPPORTED="$SUPPORTED freetype(1)";
+   		    SUPPORT_FREETYPE="true", 
+-  	    AC_CHECK_HEADER(/usr/include/freetype/freetype.h,
++  	    [AC_CHECK_HEADER(/usr/include/freetype/freetype.h,
+   		    AC_DEFINE(HAVE_FREETYPE) LIBFREETYPE="-lttf"; 
+   		    SUPPORTED="$SUPPORTED freetype(1)";
+   		    SUPPORT_FREETYPE="true";
+   		    INCLUDE_FREETYPE="-I /usr/include/freetype", 
+-  	    AC_CHECK_HEADER(/usr/local/include/freetype.h,
++  	    [AC_CHECK_HEADER(/usr/local/include/freetype.h,
+   		    AC_DEFINE(HAVE_FREETYPE) LIBFREETYPE="-lttf"; 
+   		    SUPPORTED="$SUPPORTED freetype(1)";
+   		    SUPPORT_FREETYPE="true";
+   		    INCLUDE_FREETYPE="-I /usr/local/include/", 
+-  	    AC_CHECK_HEADER(/usr/local/include/freetype/freetype.h,
++  	    [AC_CHECK_HEADER(/usr/local/include/freetype/freetype.h,
+   		    AC_DEFINE(HAVE_FREETYPE) LIBFREETYPE="-lttf"; 
+   		    SUPPORTED="$SUPPORTED freetype(1)";
+   		    SUPPORT_FREETYPE="true";
+   		    INCLUDE_FREETYPE="-I /usr/local/include/freetype", 
+-  		    SUPPORT_FREETYPE="false")))))
++  		    SUPPORT_FREETYPE="false")])])])])
+ fi
+ 
+ if test "X$SUPPORT_FREETYPE" = "X"; then
