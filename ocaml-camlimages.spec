@@ -6,7 +6,8 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 URL:		http://pauillac.inria.fr/camlimages/
-Source0:	ftp://ftp.inria.fr/lang/caml-light/bazar-ocaml/camlimages-%{version}.tgz
+Source0:	ftp://ftp.inria.fr//INRIA/Projects/cristal/caml-light/bazar-ocaml/camlimages-%{version}.tgz
+# Source0-md5:	f04f0d1a78aa38a6841dc3d71e249449
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-kill-gtk.patch
 BuildRequires:	XFree86-devel
