@@ -101,8 +101,6 @@ archive(native) = "ci_core.cmxa"
 linkopts = ""
 EOF
 
-gzip -9nf LICENSE CHANGES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -114,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz doc/*
+%doc LICENSE CHANGES README doc/*
 %{_libdir}/ocaml/camlimages/*.cm[ixa]*
 %{_libdir}/ocaml/camlimages/*.a
 %{_libdir}/ocaml/camlimages/Makefile.config
