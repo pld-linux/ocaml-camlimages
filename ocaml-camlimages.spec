@@ -11,7 +11,7 @@ Patch0:		%{name}-ac.patch
 Patch1:		%{name}-buildfix.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
-BuildRequires:	freetype-devel
+BuildRequires:	freetype-devel >= 2.0.0
 BuildRequires:	ghostscript
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
