@@ -1,0 +1,15 @@
+--- camlimages-2.11/configure.in~	Sat May  3 23:59:08 2003
++++ camlimages-2.11/configure.in	Sun May  4 00:00:23 2003
+@@ -129,9 +129,9 @@
+     LABLGTKDIR_MESSAGE="found at $LABLGTKDIR"
+     AC_MSG_RESULT($LABLGTKDIR_MESSAGE)
+     AC_MSG_CHECKING(the version of lablgtk)
+-    grep image: $LABLGTKDIR/gdk.mli > /dev/null
+-    GDK_MLI_NEW=$?
+-    if test -f $LABLGTKDIR/gBin.mli -a "$GDK_MLI_NEW" = "1"; then
++    #grep image: $LABLGTKDIR/gdk.mli > /dev/null
++    GDK_MLI_NEW=0
++    if test -f $LABLGTKDIR/gBin.cmi -a "$GDK_MLI_NEW" = "1"; then
+       SUPPORT_LABLGTK="true"
+       SUPPORTED="$SUPPORTED lablgtk"
+       LABLGTKIMGDIR="lablgtk"
