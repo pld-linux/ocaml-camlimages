@@ -1,15 +1,14 @@
 Summary:	Image processing library for OCaml
 Summary(pl):	Biblioteka przetwarzania obrazów dla OCamla
 Name:		ocaml-camlimages
-Version:	2.00
+Version:	2.11
 Release:	1
 License:	LGPL
 Group:		Libraries
 URL:		http://pauillac.inria.fr/camlimages/
 Source0:	ftp://ftp.inria.fr/lang/caml-light/bazar-ocaml/camlimages-%{version}.tgz
 Patch0:		%{name}-ac.patch
-Patch1:		%{name}-buildfix.patch
-Patch2:		%{name}-libpng12.patch
+Patch1:		%{name}-kill-gtk.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	freetype-devel >= 2.0.0
@@ -19,8 +18,10 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libungif-devel
 BuildRequires:	ocaml-x11graphics-devel
-BuildRequires:	ocaml-lablgtk-devel
+# our lablgtk is too recent
+#BuildRequires:	ocaml-lablgtk-devel
 BuildRequires:	ocaml >= 3.04-7
+BuildRequires:	gdk-pixbuf-devel
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -67,7 +68,6 @@ tej biblioteki.
 %setup -q -n camlimages-%{version}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__autoconf}
