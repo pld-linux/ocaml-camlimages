@@ -15,10 +15,10 @@ BuildRequires:	autoconf
 BuildRequires:	freetype-devel >= 2.0.0
 BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	ghostscript
+BuildRequires:	giflib-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 BuildRequires:	ocaml >= 3.04-7
 # our lablgtk is too recent
 #BuildRequires:	ocaml-lablgtk-devel
