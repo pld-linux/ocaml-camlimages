@@ -1,5 +1,5 @@
 Summary:	Image processing library for OCaml
-Summary(pl):	Biblioteka przetwarzania obraz體 dla OCamla
+Summary(pl.UTF-8):   Biblioteka przetwarzania obraz贸w dla OCamla
 Name:		ocaml-camlimages
 Version:	2.12
 Release:	1
@@ -34,17 +34,17 @@ formats.
 This package contains files needed to run bytecode executables using
 this library.
 
-%description -l pl
-Jest to biblioteka przetwarzania obraz體, dostarczaj眂a pewnych
-podstawowych funkcji przetwarzania oraz wczytywania/nagrywania r罂nych
-format體 plik體 graficznych.
+%description -l pl.UTF-8
+Jest to biblioteka przetwarzania obraz贸w, dostarczaj膮ca pewnych
+podstawowych funkcji przetwarzania oraz wczytywania/nagrywania r贸偶nych
+format贸w plik贸w graficznych.
 
-Pakiet ten zawiera binaria potrzebne do uruchamiania program體
-u縴waj眂ych tej biblioteki.
+Pakiet ten zawiera binaria potrzebne do uruchamiania program贸w
+u偶ywaj膮cych tej biblioteki.
 
 %package devel
 Summary:	Image processing library for OCaml - development part
-Summary(pl):	Biblioteka przetwarzania obraz體 dla OCamla - cze舵 programistyczna
+Summary(pl.UTF-8):   Biblioteka przetwarzania obraz贸w dla OCamla - cze艣膰 programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
@@ -57,12 +57,12 @@ formats.
 This package contains files needed to develop OCaml programs using
 this library.
 
-%description devel -l pl
-Jest to biblioteka przetwarzania obraz體, dostarczaj眂a pewnych
-podstawowych funkcji przetwarzania oraz wczytywania/nagrywania r罂nych
-format體 plik體 graficznych.
+%description devel -l pl.UTF-8
+Jest to biblioteka przetwarzania obraz贸w, dostarczaj膮ca pewnych
+podstawowych funkcji przetwarzania oraz wczytywania/nagrywania r贸偶nych
+format贸w plik贸w graficznych.
 
-Pakiet ten zawiera pliki niezb阣ne do tworzenia program體 u縴waj眂ych
+Pakiet ten zawiera pliki niezb臋dne do tworzenia program贸w u偶ywaj膮cych
 tej biblioteki.
 
 %prep
