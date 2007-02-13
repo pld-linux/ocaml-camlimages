@@ -1,5 +1,5 @@
 Summary:	Image processing library for OCaml
-Summary(pl.UTF-8):   Biblioteka przetwarzania obrazów dla OCamla
+Summary(pl.UTF-8):	Biblioteka przetwarzania obrazów dla OCamla
 Name:		ocaml-camlimages
 Version:	2.12
 Release:	1
@@ -44,7 +44,7 @@ używających tej biblioteki.
 
 %package devel
 Summary:	Image processing library for OCaml - development part
-Summary(pl.UTF-8):   Biblioteka przetwarzania obrazów dla OCamla - cześć programistyczna
+Summary(pl.UTF-8):	Biblioteka przetwarzania obrazów dla OCamla - cześć programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
